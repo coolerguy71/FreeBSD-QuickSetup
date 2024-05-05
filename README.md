@@ -50,6 +50,12 @@ LXQT: 'pkg install LXQT && sysrc dbus_enable="YES" && pkg install sddm && sysrc 
 
 ===================================================
 
+GUI NETWORK CONNECTIVITY INTERFACE:
+
+WIFI NETWORKS MANAGER: 'pkg install wifimgr"
+
+===================================================
+
 WEB BROWSERS:
 
 FIREFOX: 'pkg install firefox'
