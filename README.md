@@ -30,13 +30,13 @@ After you run the command for your graphics provider, run: 'pw groupmod video -m
 
 DESKTOP ENVIRONMENTS:
 
-KDE PLASMA: 'pkg install kde5 && sysrc dbus_enable="YES" && pkg install sddm && sysrc dbus_enable="YES"'
+KDE PLASMA: 'pkg install kde5 && sysrc dbus_enable="YES" && pkg install sddm && sysrc sddm_enable="YES"'
 
-KDE PLASMA MINIMAL: 'pkg install plasma5-plasma konsole dolphin && sysrc dbus_enable="YES" && pkg install sddm && sysrc dbus_enable="YES"'
+KDE PLASMA MINIMAL: 'pkg install plasma5-plasma konsole dolphin && sysrc dbus_enable="YES" && pkg install sddm && sysrc sddm_enable="YES"'
 
-GNOME: 'pkg install gnome && sysrc dbus_enable="YES" && sysrc GDM_ENABLE="YES"'
+GNOME: 'pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"'
 
-GNOME MINIMAL: 'pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc GDM_ENABLE="YES"'
+GNOME MINIMAL: 'pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc gdm-enable="YES"'
 
 XFCE: 'pkg install xfce && sysrc dbus_enable="YES" && pkg install lightdm lightdm-gtk-greeter && sysrc lightdm_enable="YES"
 
