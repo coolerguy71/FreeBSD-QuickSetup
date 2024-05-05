@@ -60,7 +60,7 @@ WEB BROWSERS:
 
 FIREFOX: 'pkg install firefox'
 
-CHROMIUM (Note, I tried this (29/4/24) and pkg was not available, compiling is the only method, compiling takes a while!): 'cd /usr/ports/www/chromium && make install clean'
+CHROMIUM (Note, I tried this (29/4/24) and package was not available, compiling is the only method, compiling takes a while!): 'cd /usr/ports/www/chromium && make install clean'
 
 IDIDIUM BROWSER: 'pkg install iridium-browser'
 
