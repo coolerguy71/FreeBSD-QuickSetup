@@ -22,7 +22,7 @@ Intel: 'pkg install drm-kmod && sysrc kld_list+=i915kms'
 
 AMD: 'pkg install drm-kmod && sysrc kld_list+=amdgpu'
 
-NVIDIA: 'pkg install nvidia-driver && 'sysrc kld_list+=nvidia-modeset'
+NVIDIA: 'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
 
 After you run the command for your graphics provider, run: 'pw groupmod video -m username'
 
