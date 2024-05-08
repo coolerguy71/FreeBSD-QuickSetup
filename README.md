@@ -30,6 +30,8 @@ After you run the command for your graphics provider, run: 'pw groupmod video -m
 
 DESKTOP ENVIRONMENTS:
 
+Before anything, install xorg! Required for installing a desktop. Install this with: 'pkg install xorg'
+
 KDE PLASMA: 'pkg install kde5 && sysrc dbus_enable="YES" && pkg install sddm && sysrc sddm_enable="YES"'
 
 KDE PLASMA MINIMAL: 'pkg install plasma5-plasma konsole dolphin && sysrc dbus_enable="YES" && pkg install sddm && sysrc sddm_enable="YES"'
