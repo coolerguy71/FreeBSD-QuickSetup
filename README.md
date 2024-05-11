@@ -1,6 +1,6 @@
 ===================================================
 
-###The last FreeBSD post-install guide you may ever need!###
+The last FreeBSD post-install guide you may ever need!
 
 ===================================================
 
