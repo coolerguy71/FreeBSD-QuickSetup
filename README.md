@@ -1,6 +1,6 @@
 Looking to install FreeBSD? I gotchya.
 
-<img src="https://i.ibb.co/k9yc0CF/New-Project-7.png"/>
+<img src="https://i.ibb.co/TR5jmBt/New-Project-8.png"/>
 ===================================================
 
 The last FreeBSD post-install guide you may ever need!
