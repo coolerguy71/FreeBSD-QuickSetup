@@ -1,6 +1,5 @@
 Looking to install FreeBSD? I gotchya.
 
-https://ibb.co/4YfNMrx
 <img src="https://ibb.co/4YfNMrx"/>
 ===================================================
 
