@@ -1,7 +1,6 @@
 Looking to install FreeBSD? I gotchya.
 
-<img src="https://docs.freebsd.org/images/books/handbook/bsdinstall/bsdinstall-newboot-loader-menu.png" alt="FreeBSD boot loader menu"/>![Uploading image.png…]()
-
+https://ibb.co/4YfNMrx
 
 ===================================================
 
