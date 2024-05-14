@@ -8,6 +8,7 @@ Press enter to select something, and use the arrow keys to cycle through options
 
 <img src="https://i.ibb.co/TR5jmBt/New-Project-8.png"/>
 1.
+Press enter to select something, and use the arrow keys to cycle through options. 
 <img src="https://i.ibb.co/YRjm4Jh/New-Project-9.png"/>
 2.
 <img src="https://i.ibb.co/kKdc1fF/image.png"/>
