@@ -1,15 +1,19 @@
 Looking to install FreeBSD? I gotchya.
+
+0:
+<img src="https://i.ibb.co/0rNccqV/image.png"/>
 Press enter to select something, and use the arrow keys to cycle through options. 
 
-1.
+0.
 <img src="https://i.ibb.co/TR5jmBt/New-Project-8.png"/>
-2.
+1.
 <img src="https://i.ibb.co/YRjm4Jh/New-Project-9.png"/>
-3.
-https://i.ibb.co/kKdc1fF/image.png
+2.
 <img src="https://i.ibb.co/kKdc1fF/image.png"/>
+3.
+<img src="https://i.ibb.co/BspLqyS/image.png"/>
 4.
-<img src="https://i.ibb.co/JKpMbcx/image.png"/>
+<img src="
 ===================================================
 
 The last FreeBSD post-install guide you may ever need!
