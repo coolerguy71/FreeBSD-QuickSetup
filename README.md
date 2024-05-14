@@ -2,9 +2,9 @@ Looking to install FreeBSD? I gotchya.
 
 0:
 <img src="https://i.ibb.co/0rNccqV/image.png"/>
+
 Press enter to select something, and use the arrow keys to cycle through options. 
 
-0.
 <img src="https://i.ibb.co/TR5jmBt/New-Project-8.png"/>
 1.
 <img src="https://i.ibb.co/YRjm4Jh/New-Project-9.png"/>
