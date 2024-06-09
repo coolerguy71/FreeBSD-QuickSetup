@@ -20,6 +20,8 @@
 
 > 0.48 forgot to update iridium typo
 
+> 0.49 way too many inconsistencies, fixed nvidia quotes, and seperated a couple comments from commands.
+
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
 # Jump right into FreeBSD!
@@ -64,14 +66,15 @@ pkg install drm-kmod && sysrc kld_list+=radeonkms
 > Newer cards, GTX 9XX and newer:
 
 ```
-'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
+'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset
 ```
 
 > Older card? You can install older drivers!:
 
 ```
-pkg install nvidia-driver-304 && sysrc kld_list+=nvidia' *note this version requires an older version of XORG
+pkg install nvidia-driver-304 && sysrc kld_list+=nvidia 
 ```
+*note this version of the Nvidia Driver requires an older version of XORG
 
 ```
 pkg install nvidia-driver-340 && sysrc kld_list+=nvidia
@@ -175,14 +178,16 @@ pkg install hyprland kitty
 ## Sway:
 
 ```
-pkg install sway foot **Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
+pkg install sway foot
 ```
+**Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
 
 ## SwayFX:
 
 ```
 pkg install swayfx foot
 ```
+**Base swayfx, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
 
 ## Hikari:
 
