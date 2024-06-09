@@ -1,9 +1,10 @@
 ===================================================
 
-Currently: V, 0.41
+Currently: V, 0.42
 Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
 
 Accidentally put sysrc sddm_enable="YES" in the GNOME part.
+**also very minor formatting changes
 
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
@@ -125,13 +126,13 @@ pkg install mate lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && pkg i
 # MATE MINIMAL: 
 
 ```
-> pkg install mate-base mate-terminal lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm-enable="YES"
+pkg install mate-base mate-terminal lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm-enable="YES"
 ```
 
 # CINNAMON: 
 
 ```
-> 'pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
+'pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
 ```
 
 # LXQT: 
