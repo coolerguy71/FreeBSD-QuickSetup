@@ -14,6 +14,8 @@
 
 > 0.45 Only the Virtualbox kernel module needs building, not the entire thing. Thanks Alexander88207. fixed "Ididium" typo, thanks Setesh.
 
+> 0.46 (minor update) Added entry for the user to be in the vboxusers group.
+
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
 ### Jump right into FreeBSD!
@@ -270,6 +272,10 @@ pkg install w3m
 
 ```
 cd /usr/ports/emulators/virtualbox-ose-kmod/ make install clean && pkg install virtualbox-ose && kldload vboxdrv
+```
+
+```
+pw groupmod vboxusers -m username
 ```
 
 ```
