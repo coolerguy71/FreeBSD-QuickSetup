@@ -21,7 +21,9 @@ Intel:
 > 'pkg install drm-kmod && sysrc kld_list+=i915kms'
 
 AMD: 
-> 'pkg install drm-kmod && sysrc kld_list+=amdgpu'
+> (AMD Radeon HD7000 and newer): 'pkg install drm-kmod && sysrc kld_list+=amdgpu'
+> Older card? No problem!
+> 'pkg install drm-kmod && sysrc kld_list+=radeonkms'
 
 NVIDIA: 
 > Newer cards, GTX 9XX and newer: 'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
