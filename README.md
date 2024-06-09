@@ -1,6 +1,10 @@
 ===================================================
 
-V, 0.27
+Currently: V, 0.34
+
+(New in 0.33, forgot to include it last release)
+0.33 Notes: simplified desktop commands a bit and added login manager documentation for Wayland compositors.
+V, 0.34, (Just updating the version number)
 
 ## Jump right into FreeBSD!
 
