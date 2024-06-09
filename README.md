@@ -1,9 +1,11 @@
 ===================================================
 
-Currently: V, 0.39
+Currently: V, 0.40
 Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
 
-Adjusted a couple inconsistencies.
+Fixed SDDM not being applied in rc.conf for KDE Plasma
+
+> Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
 ### Jump right into FreeBSD!
 
@@ -93,13 +95,13 @@ pkg install kde5 sddm && sysrc dbus_enable="YES"
 # KDE PLASMA MINIMAL: 
 
 ```
-pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES"
+pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
 
 # GNOME: 
 
 ```
-pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"
+pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES" && sysrc sddm_enable="YES"
 ```
 
 # GNOME MINIMAL: 
