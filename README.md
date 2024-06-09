@@ -1,9 +1,10 @@
 ===================================================
 
-Currently: V, 0.38
+Currently: V, 0.39
 Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
 
-Revamped Formatting in V, 0.38
+Adjusted a couple inconsistencies.
+
 ### Jump right into FreeBSD!
 
 
@@ -31,9 +32,9 @@ pkg install drm-kmod && sysrc kld_list+=i915kms
 
 # AMD: 
 
-'''
+```
 (AMD Radeon HD7000 and newer): pkg install drm-kmod && sysrc kld_list+=amdgpu
-'''
+```
 
 > Older card? No problem!
 
@@ -206,7 +207,7 @@ pkg install chromium
 # IDIDIUM BROWSER: 
 
 ```
-> 'pkg install iridium-browser'
+pkg install iridium-browser
 ```
 
 # FALKON: 
@@ -289,9 +290,8 @@ add path 'usb/*' mode 0660 group operator
 ```
 
 ```
-sysrc devfs_system_ruleset="system"
+sysrc devfs_system_ruleset="system" && service devfs restart
 ```
-> service devfs restart
 
 # BHYVE:
 
