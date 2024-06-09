@@ -49,41 +49,41 @@ If you're using an X-based DE, install XORG first!
 > 'pkg install xorg'
 
 KDE PLASMA: 
-> 'pkg install kde5 && sysrc dbus_enable="YES" && pkg install sddm && sysrc dbus_enable="YES"'
+> 'pkg install kde5 sddm && sysrc dbus_enable="YES" && sysrc dbus_enable="YES"'
 
 KDE PLASMA MINIMAL: 
-> 'pkg install plasma5-plasma konsole dolphin && sysrc dbus_enable="YES" && pkg install sddm && sysrc dbus_enable="YES"'
+> 'pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES" && sysrc dbus_enable="YES"'
 
 GNOME: 
-> 'pkg install gnome && sysrc dbus_enable="YES" && sysrc GDM_ENABLE="YES"'
+> 'pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"'
 
 GNOME MINIMAL: 
-> 'pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc GDM_ENABLE="YES"'
+> 'pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"'
 
 XFCE: 
-> 'pkg install xfce && sysrc dbus_enable="YES" && pkg install lightdm lightdm-gtk-greeter && sysrc lightdm_enable="YES"
+> 'pkg install xfce lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
 
 MATE: 
-> 'pkg install mate && sysrc dbus_enable="YES" && pkg install lightdm lightdm-gtk-greeter && sysrc lightdm-enable="YES"
+> 'pkg install mate lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && pkg install && sysrc lightdm-enable="YES"
 
 MATE MINIMAL: 
-> 'pkg install mate-base mate-terminal && sysrc dbus_enable="YES" && pkg install lightdm lightdm-gtk-greeter && sysrc lightdm-enable="YES"
+> 'pkg install mate-base mate-terminal lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm-enable="YES"
 
 CINNAMON: 
-> 'pkg install cinnamon && sysrc dbus_enable="YES" && pkg install lightdm lightdm-gtk-greeter && sysrc lightdm_enable="YES"'
+> 'pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"'
 
 LXQT: 
-> 'pkg install LXQT && sysrc dbus_enable="YES" && pkg install sddm && sysrc sddm_enable="YES"'
+> 'pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"'
 
 ## Compositors (Wayland)
 
 14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
 
 Before anything, install Wayland and SeatD:
-> 'pkg install wayland seatd && sysrc seatd_enable="YES" && service seatd start'
+> 'pkg install wayland seatd && sysrc seatd_enable="YES" && sysrc dbus_enable="YES" && service seatd start'
 
 HYPRLAND:
-> pkg install hyprland
+> 'pkg install hyprland'
 
 Sway:
 > 'pkg install sway' **Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
@@ -93,6 +93,11 @@ SwayFX:
 
 Hikari:
 > Coming soon!
+
+If you don't want to run a terminal command every time you boot up your system to start your compositor, you may install any login manager below:
+> 'pkg install lightdm && sysrc lightdm_enable="YES"'
+> 'pkg install sddm && sysrc sddm_enable="YES"'
+> 'pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
 
 ===================================================
 
