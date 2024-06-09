@@ -16,7 +16,9 @@
 
 > 0.46 (minor update) Added entry for the user to be in the vboxusers group.
 
-> 0.47 More formatting fixes, thanks RandomGuy12. 
+> 0.47 More formatting fixes, thanks RandomGuy12.
+
+> 0.48 forgot to update iridium typo
 
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
@@ -218,7 +220,7 @@ pkg install firefox
 pkg install chromium
 ```
 
-## IDIDIUM BROWSER: 
+## IRIDIUM BROWSER: 
 
 ```
 pkg install iridium-browser
