@@ -1,11 +1,16 @@
 ===================================================
 
-Currently: V, 0.43
-Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
+> Currently: V, 0.44
 
-Accidentally put sysrc sddm_enable="YES" in the GNOME part.
-**also very minor formatting changes
-add kitty terminal to install w/ hyprland
+> Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
+
+> 0.41 Accidentally put sysrc sddm_enable="YES" in the GNOME part.
+
+> 0.42 **also very minor formatting changes
+
+> 0.43 add kitty terminal to install w/ hyprland
+> 0.44 add wifimgr, it's useful
+
 
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
@@ -305,15 +310,24 @@ Coming soon!
 
 ===================================================
 
+## Extra Wireless Options
 
-Have fun with FreeBSD!
+> Don't want to edit wpa_supplicant all the time just to connect to another Wi-Fi network? Try wifimgr!
+
+```
+pkg install wifimgr
+```
 
 ===================================================
 
-Source of information: https://docs.freebsd.org/en/books/handbook/
+> Have fun with FreeBSD!
 
 ===================================================
 
-By: coolguy71 
+> Source of information: https://docs.freebsd.org/en/books/handbook/
+
+===================================================
+
+> By: coolguy71 
 
 ===================================================
