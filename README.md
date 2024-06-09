@@ -1,7 +1,7 @@
 ===================================================
 
-Currently: V, 0.35
-Too many updates! Needed to fix text spacing for Compositor, it was all mushed up.
+Currently: V, 0.36
+dbus was repeated twice in the KDE plasma doc. Thanks GrahamPerrin!
 
 ## Jump right into FreeBSD!
 
@@ -50,10 +50,10 @@ If you're using an X-based DE, install XORG first!
 > 'pkg install xorg'
 
 KDE PLASMA: 
-> 'pkg install kde5 sddm && sysrc dbus_enable="YES" && sysrc dbus_enable="YES"'
+> 'pkg install kde5 sddm && sysrc dbus_enable="YES"'
 
 KDE PLASMA MINIMAL: 
-> 'pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES" && sysrc dbus_enable="YES"'
+> 'pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES"'
 
 GNOME: 
 > 'pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"'
