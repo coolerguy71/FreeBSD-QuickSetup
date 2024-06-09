@@ -100,17 +100,29 @@ W3M:
 
 VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling Virtualbox to get it working. It takes longer (Maybe around 30 minutes to 1 hour), but it still works!)
 > cd /usr/ports/emulators/virtualbox-ose && make install clean && kldload vboxdrv
+
 > 'ee /boot/loader.conf', add the line 'vboxdrv_load="YES"' After, press "ESC + Enter" at the same tme, then the "A" key!
+
 > 'sysrc vboxnet_enable="YES" && 'pw groupmod vboxusers -m username'
+
 > 'ee /etc/devfs.conf', add below!
+
 > 'own     vboxnetctl root:vboxusers'
+
 > 'perm    vboxnetctl 0660'
+
 > Continue if you want USB support!
+
 > 'pw groupmod operator -m username'
+
 > 'ee /etc/devfs.rules' (doesn't exist yet, dont worry if it says it's new!) Add below:
+
 > '[system=10]'
+
 > 'add path 'usb/*' mode 0660 group operator'
+
 > 'sysrc devfs_system_ruleset="system"'
+
 > service devfs restart
 
 BHYVE:
