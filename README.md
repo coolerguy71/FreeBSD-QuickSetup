@@ -22,6 +22,8 @@
 
 > 0.49 way too many inconsistencies, fixed nvidia quotes, and seperated a couple comments from commands.
 
+> 0.50 fixed vague comments
+
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
 # Jump right into FreeBSD!
@@ -74,7 +76,7 @@ pkg install drm-kmod && sysrc kld_list+=radeonkms
 ```
 pkg install nvidia-driver-304 && sysrc kld_list+=nvidia 
 ```
-*note this version of the Nvidia Driver requires an older version of XORG
+*note this version of the Nvidia Driver (304) requires an older version of XORG
 
 ```
 pkg install nvidia-driver-340 && sysrc kld_list+=nvidia
