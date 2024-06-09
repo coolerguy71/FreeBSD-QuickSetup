@@ -1,7 +1,9 @@
 ===================================================
 
-Currently: V, 0.36
-dbus was repeated twice in the KDE plasma doc. Thanks GrahamPerrin!
+Currently: V, 0.37
+Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
+
+Making initial steps torward improving the guide in formatting.
 
 ## Jump right into FreeBSD!
 
@@ -19,8 +21,9 @@ Password:
 ## VIDEO DRIVERS:
 
 Intel:
-> 'pkg install drm-kmod && sysrc kld_list+=i915kms'
-
+'''
+pkg install drm-kmod && sysrc kld_list+=i915kms
+'''
 AMD: 
 > (AMD Radeon HD7000 and newer): 'pkg install drm-kmod && sysrc kld_list+=amdgpu'
 > Older card? No problem!
