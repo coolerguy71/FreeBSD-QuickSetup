@@ -16,34 +16,36 @@
 
 > 0.46 (minor update) Added entry for the user to be in the vboxusers group.
 
+> 0.47 More formatting fixes, thanks RandomGuy12. 
+
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
-### Jump right into FreeBSD!
+# Jump right into FreeBSD!
 
 
-*RUN ALL COMMANDS BELOW AS ROOT! 
+> *RUN ALL COMMANDS BELOW AS ROOT! 
 
-TO BECOME ROOT, RUN: 
+> TO BECOME ROOT, RUN: 
 
 ```
  su
 ```
-Password:
+> Password:
 
 ```
 (The root password you set)
 ```
 ===================================================
 
-## VIDEO DRIVERS:
+# VIDEO DRIVERS:
 
-# Intel:
+## Intel:
 
 ```
 pkg install drm-kmod && sysrc kld_list+=i915kms
 ```
 
-# AMD: 
+## AMD: 
 
 ```
 (AMD Radeon HD7000 and newer): pkg install drm-kmod && sysrc kld_list+=amdgpu
@@ -55,7 +57,7 @@ pkg install drm-kmod && sysrc kld_list+=i915kms
 pkg install drm-kmod && sysrc kld_list+=radeonkms
 ```
 
-# NVIDIA: 
+## NVIDIA: 
 
 > Newer cards, GTX 9XX and newer:
 
@@ -81,7 +83,7 @@ pkg install nvidia-driver-390 && sysrc kld_list+=nvidia-modeset
 pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset
 ```
 
-After you run the command for your graphics provider, run: 
+> After you run the command for your graphics provider, run: 
 
 ```
 pw groupmod video -m username
@@ -89,105 +91,104 @@ pw groupmod video -m username
 
 ===================================================
 
-## DESKTOP ENVIRONMENTS (XORG):
+# DESKTOP ENVIRONMENTS (XORG):
 
-If you're using an X-based DE, install XORG first!
+# If you're using an X-based DE, install XORG first!
 
 ```
 pkg install xorg
 ```
 
-# KDE PLASMA: 
+## KDE PLASMA: 
 
 ```
 pkg install kde5 sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
 
-# KDE PLASMA MINIMAL: 
+## KDE PLASMA MINIMAL: 
 
 ```
 pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
 
-# GNOME: 
+## GNOME: 
 
 ```
 pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"
 ```
 
-# GNOME MINIMAL: 
+## GNOME MINIMAL: 
 
 ```
 pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"
 ```
 
-# XFCE: 
+## XFCE: 
 
 ```
 pkg install xfce lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
 ```
 
-# MATE: 
+## MATE: 
 
 ```
 pkg install mate lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && pkg install && sysrc lightdm-enable="YES"
 ```
 
-# MATE MINIMAL: 
+## MATE MINIMAL: 
 
 ```
 pkg install mate-base mate-terminal lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm-enable="YES"
 ```
 
-# CINNAMON: 
+## CINNAMON: 
 
 ```
-'pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
+pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
 ```
 
-# LXQT: 
+## LXQT: 
 
 ```
 pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
 
-## Compositors (Wayland)
+# Compositors (Wayland)
 
-```
-14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
-```
+## 14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
 
-Before anything, install Wayland and SeatD:
+
+> Before anything, install Wayland and SeatD:
 
 ```
 pkg install wayland seatd && sysrc seatd_enable="YES" && sysrc dbus_enable="YES" && service seatd start
 ```
 
-# HYPRLAND:
+## HYPRLAND:
 
 ```
 pkg install hyprland kitty
 ```
 
-# Sway:
+## Sway:
 
 ```
 pkg install sway foot **Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
 ```
 
-# SwayFX:
+## SwayFX:
 
 ```
 pkg install swayfx foot
 ```
 
-# Hikari:
+## Hikari:
 
 ```
 Coming soon!
 ```
 
-# Login Managers:
+## Login Managers:
 
 ```
 pkg install lightdm && sysrc lightdm_enable="YES"
@@ -203,62 +204,62 @@ pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more
 
 ===================================================
 
-## WEB BROWSERS: (Ranked heaviest to lightest btw!)
+# WEB BROWSERS: (Ranked heaviest to lightest btw!)
 
-# FIREFOX: 
+## FIREFOX: 
 
 ```
 pkg install firefox
 ```
 
-# CHROMIUM 
+## CHROMIUM 
 
 ```
 pkg install chromium
 ```
 
-# IDIDIUM BROWSER: 
+## IDIDIUM BROWSER: 
 
 ```
 pkg install iridium-browser
 ```
 
-# FALKON: 
+## FALKON: 
 
 ```
 pkg install falkon
 ```
 
-# KONQUEROR: 
+## KONQUEROR: 
 
 ```
 pkg install konqueror
 
 ```
 
-# EPIPHANY (GNOME WEB): 
+## EPIPHANY (GNOME WEB): 
 
 ```
 pkg install epiphany
 ```
 
-# QUTEBROWSER: 
+## QUTEBROWSER: 
 
 ```
 pkg install qutebrowser
 ```
 
-# DILLO: 
+## DILLO: 
 ```
 pkg install dillo
 ```
 
-# LINKS: 
+## LINKS: 
 ```
 pkg install links
 ```
 
-# W3M:
+## W3M:
 
 ```
 pkg install w3m
@@ -266,9 +267,9 @@ pkg install w3m
 
 ===================================================
 
-## VIRTUALIZATION:
+# VIRTUALIZATION:
 
-# VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling the Virtualbox kernel module. to get it working. It takes longer (only takes a couple minutes), but it still works!)
+## VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling the Virtualbox kernel module. to get it working. It takes longer (only takes a couple minutes), but it still works!)
 
 ```
 cd /usr/ports/emulators/virtualbox-ose-kmod/ make install clean && pkg install virtualbox-ose && kldload vboxdrv
@@ -310,7 +311,7 @@ add path 'usb/*' mode 0660 group operator
 sysrc devfs_system_ruleset="system" && service devfs restart
 ```
 
-# BHYVE:
+## BHYVE:
 
 ```
 Coming soon!
@@ -318,9 +319,9 @@ Coming soon!
 
 ===================================================
 
-## Extra Wireless Options
+# Extra Wireless Options
 
-> Don't want to edit wpa_supplicant all the time just to connect to another Wi-Fi network? Try wifimgr!
+## Don't want to edit wpa_supplicant all the time just to connect to another Wi-Fi network? Try wifimgr!
 
 ```
 pkg install wifimgr
