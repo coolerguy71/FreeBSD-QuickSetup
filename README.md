@@ -1,10 +1,7 @@
 ===================================================
 
-Currently: V, 0.34
-
-(New in 0.33, forgot to include it last release)
-0.33 Notes: simplified desktop commands a bit and added login manager documentation for Wayland compositors.
-V, 0.34, (Just updating the version number)
+Currently: V, 0.35
+Too many updates! Needed to fix text spacing for Compositor, it was all mushed up.
 
 ## Jump right into FreeBSD!
 
@@ -100,7 +97,9 @@ Hikari:
 
 If you don't want to run a terminal command every time you boot up your system to start your compositor, you may install any login manager below:
 > 'pkg install lightdm && sysrc lightdm_enable="YES"'
+
 > 'pkg install sddm && sysrc sddm_enable="YES"'
+
 > 'pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
 
 ===================================================
