@@ -1,177 +1,303 @@
 ===================================================
 
-Currently: V, 0.37
+Currently: V, 0.38
 Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
 
-Making initial steps torward improving the guide in formatting.
-
-## Jump right into FreeBSD!
+Revamped Formatting in V, 0.38
+### Jump right into FreeBSD!
 
 
 *RUN ALL COMMANDS BELOW AS ROOT! 
 
 TO BECOME ROOT, RUN: 
-> 'su'
 
+```
+ su
+```
 Password:
-> 'the root password you set'
 
+```
+(The root password you set)
+```
 ===================================================
 
 ## VIDEO DRIVERS:
 
-Intel:
-'''
-pkg install drm-kmod && sysrc kld_list+=i915kms
-'''
-AMD: 
-> (AMD Radeon HD7000 and newer): 'pkg install drm-kmod && sysrc kld_list+=amdgpu'
-> Older card? No problem!
-> 'pkg install drm-kmod && sysrc kld_list+=radeonkms'
+# Intel:
 
-NVIDIA: 
-> Newer cards, GTX 9XX and newer: 'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
+```
+pkg install drm-kmod && sysrc kld_list+=i915kms
+```
+
+# AMD: 
+
+'''
+(AMD Radeon HD7000 and newer): pkg install drm-kmod && sysrc kld_list+=amdgpu
+'''
+
+> Older card? No problem!
+
+```
+pkg install drm-kmod && sysrc kld_list+=radeonkms
+```
+
+# NVIDIA: 
+
+> Newer cards, GTX 9XX and newer:
+
+```
+'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
+```
 
 > Older card? You can install older drivers!:
 
-> 'pkg install nvidia-driver-304 && sysrc kld_list+=nvidia' *note this version requires an older version of XORG
+```
+pkg install nvidia-driver-304 && sysrc kld_list+=nvidia' *note this version requires an older version of XORG
+```
 
-> 'pkg install nvidia-driver-340 && sysrc kld_list+=nvidia'
+```
+pkg install nvidia-driver-340 && sysrc kld_list+=nvidia
+```
 
-> 'pkg install nvidia-driver-390 && sysrc kld_list+=nvidia-modeset'
+```
+pkg install nvidia-driver-390 && sysrc kld_list+=nvidia-modeset
+```
 
-> 'pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset'
+```
+pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset
+```
 
 After you run the command for your graphics provider, run: 
-> 'pw groupmod video -m username'
+
+```
+pw groupmod video -m username
+```
 
 ===================================================
 
 ## DESKTOP ENVIRONMENTS (XORG):
 
 If you're using an X-based DE, install XORG first!
-> 'pkg install xorg'
 
-KDE PLASMA: 
-> 'pkg install kde5 sddm && sysrc dbus_enable="YES"'
+```
+pkg install xorg
+```
 
-KDE PLASMA MINIMAL: 
-> 'pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES"'
+# KDE PLASMA: 
 
-GNOME: 
-> 'pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"'
+```
+pkg install kde5 sddm && sysrc dbus_enable="YES"
+```
 
-GNOME MINIMAL: 
-> 'pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"'
+# KDE PLASMA MINIMAL: 
 
-XFCE: 
-> 'pkg install xfce lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
+```
+pkg install plasma5-plasma konsole dolphin sddm && sysrc dbus_enable="YES"
+```
 
-MATE: 
-> 'pkg install mate lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && pkg install && sysrc lightdm-enable="YES"
+# GNOME: 
 
-MATE MINIMAL: 
-> 'pkg install mate-base mate-terminal lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm-enable="YES"
+```
+pkg install gnome && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"
+```
 
-CINNAMON: 
-> 'pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"'
+# GNOME MINIMAL: 
 
-LXQT: 
-> 'pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"'
+```
+pkg install gnome-lite gnome-terminal && sysrc dbus_enable="YES" && sysrc gdm_enable="YES"
+```
+
+# XFCE: 
+
+```
+pkg install xfce lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
+```
+
+# MATE: 
+
+```
+pkg install mate lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && pkg install && sysrc lightdm-enable="YES"
+```
+
+# MATE MINIMAL: 
+
+```
+> pkg install mate-base mate-terminal lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm-enable="YES"
+```
+
+# CINNAMON: 
+
+```
+> 'pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && sysrc lightdm_enable="YES"
+```
+
+# LXQT: 
+
+```
+pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
+```
 
 ## Compositors (Wayland)
 
+```
 14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
+```
 
 Before anything, install Wayland and SeatD:
-> 'pkg install wayland seatd && sysrc seatd_enable="YES" && sysrc dbus_enable="YES" && service seatd start'
 
-HYPRLAND:
-> 'pkg install hyprland'
+```
+pkg install wayland seatd && sysrc seatd_enable="YES" && sysrc dbus_enable="YES" && service seatd start
+```
 
-Sway:
-> 'pkg install sway' **Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
+# HYPRLAND:
 
-SwayFX:
-> 'pkg install swayfx'
+```
+pkg install hyprland
+```
 
-Hikari:
-> Coming soon!
+# Sway:
 
-If you don't want to run a terminal command every time you boot up your system to start your compositor, you may install any login manager below:
-> 'pkg install lightdm && sysrc lightdm_enable="YES"'
+```
+pkg install sway foot **Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
+```
 
-> 'pkg install sddm && sysrc sddm_enable="YES"'
+# SwayFX:
 
-> 'pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
+```
+pkg install swayfx foot
+```
+
+# Hikari:
+
+```
+Coming soon!
+```
+
+# Login Managers:
+
+```
+pkg install lightdm && sysrc lightdm_enable="YES"
+```
+
+```
+pkg install sddm && sysrc sddm_enable="YES"
+```
+
+```
+pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
+```
 
 ===================================================
 
 ## WEB BROWSERS: (Ranked heaviest to lightest btw!)
 
-FIREFOX: 
-> 'pkg install firefox'
+# FIREFOX: 
 
-CHROMIUM 
-> 'pkg install chromium'
+```
+pkg install firefox
+```
 
-IDIDIUM BROWSER: 
+# CHROMIUM 
+
+```
+pkg install chromium
+```
+
+# IDIDIUM BROWSER: 
+
+```
 > 'pkg install iridium-browser'
+```
 
-FALKON: 
-> 'pkg install falkon'
+# FALKON: 
 
-KONQUEROR: 
-> 'pkg install konqueror'
+```
+pkg install falkon
+```
 
-EPIPHANY (GNOME WEB): 
-> 'pkg install epiphany'
+# KONQUEROR: 
 
-QUTEBROWSER: 
-> 'pkg install qutebrowser'
+```
+pkg install konqueror
 
-DILLO: 
-> 'pkg install dillo'
+```
 
-LINKS: 
-> 'pkg install links'
+# EPIPHANY (GNOME WEB): 
 
-W3M: 
-> 'pkg install w3m'
+```
+pkg install epiphany
+```
+
+# QUTEBROWSER: 
+
+```
+pkg install qutebrowser
+```
+
+# DILLO: 
+```
+pkg install dillo
+```
+
+# LINKS: 
+```
+pkg install links
+```
+
+# W3M:
+
+```
+pkg install w3m
+```
 
 ===================================================
 
 ## VIRTUALIZATION:
 
-VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling Virtualbox to get it working. It takes longer (Maybe around 30 minutes to 1 hour), but it still works!)
-> cd /usr/ports/emulators/virtualbox-ose && make install clean && kldload vboxdrv
+# VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling Virtualbox to get it working. It takes longer (Maybe around 30 minutes to 1 hour), but it still works!)
 
-> 'ee /boot/loader.conf', add the line 'vboxdrv_load="YES"' After, press "ESC + Enter" at the same tme, then the "A" key!
+```
+cd /usr/ports/emulators/virtualbox-ose && make install clean && kldload vboxdrv
+```
 
-> 'sysrc vboxnet_enable="YES" && 'pw groupmod vboxusers -m username'
+```
+ee /boot/loader.conf, add the line vboxdrv_load="YES" After, to exit ee, press "ESC + Enter" at the same tme, then the "A" key!
+```
 
-> 'ee /etc/devfs.conf', add below!
+```
+sysrc vboxnet_enable="YES" && pw groupmod vboxusers -m username
+```
 
-> 'own     vboxnetctl root:vboxusers'
+```
+ee /etc/devfs.conf', add below!
 
-> 'perm    vboxnetctl 0660'
+own     vboxnetctl root:vboxusers
+perm    vboxnetctl 0660
+```
 
 > Continue if you want USB support!
 
-> 'pw groupmod operator -m username'
+```
+pw groupmod operator -m username
+```
 
-> 'ee /etc/devfs.rules' (doesn't exist yet, dont worry if it says it's new!) Add below:
+```
+ee /etc/devfs.rules' (doesn't exist yet, dont worry if it says it's new!) Add below:
 
-> '[system=10]'
+[system=10]
+add path 'usb/*' mode 0660 group operator
+```
 
-> 'add path 'usb/*' mode 0660 group operator'
-
-> 'sysrc devfs_system_ruleset="system"'
-
+```
+sysrc devfs_system_ruleset="system"
+```
 > service devfs restart
 
-BHYVE:
-> Coming soon!
+# BHYVE:
+
+```
+Coming soon!
+```
 
 ===================================================
 
