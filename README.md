@@ -25,10 +25,15 @@ AMD:
 
 NVIDIA: 
 > Newer cards, GTX 9XX and newer: 'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
+
 > Older card? You can install older drivers!:
+
 > 'pkg install nvidia-driver-304 && sysrc kld_list+=nvidia' *note this version requires an older version of XORG
+
 > 'pkg install nvidia-driver-340 && sysrc kld_list+=nvidia'
+
 > 'pkg install nvidia-driver-390 && sysrc kld_list+=nvidia-modeset'
+
 > 'pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset'
 
 After you run the command for your graphics provider, run: 
