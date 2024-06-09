@@ -24,14 +24,22 @@ AMD:
 > 'pkg install drm-kmod && sysrc kld_list+=amdgpu'
 
 NVIDIA: 
-> 'pkg install nvidia-driver && 'sysrc kld_list+=nvidia-modeset'
+> Newer cards, GTX 9XX and newer: 'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset'
+> Older card? You can install older drivers!:
+> 'pkg install nvidia-driver-304 && sysrc kld_list+=nvidia' *note this version requires an older version of XORG
+> 'pkg install nvidia-driver-340 && sysrc kld_list+=nvidia'
+> 'pkg install nvidia-driver-390 && sysrc kld_list+=nvidia-modeset'
+> 'pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset'
 
 After you run the command for your graphics provider, run: 
 > 'pw groupmod video -m username'
 
 ===================================================
 
-## DESKTOP ENVIRONMENTS:
+## DESKTOP ENVIRONMENTS (XORG):
+
+If you're using an X-based DE, install XORG first!
+> 'pkg install xorg'
 
 KDE PLASMA: 
 > 'pkg install kde5 && sysrc dbus_enable="YES" && pkg install sddm && sysrc dbus_enable="YES"'
@@ -59,6 +67,25 @@ CINNAMON:
 
 LXQT: 
 > 'pkg install LXQT && sysrc dbus_enable="YES" && pkg install sddm && sysrc sddm_enable="YES"'
+
+## Compositors (Wayland)
+
+14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
+
+Before anything, install Wayland and SeatD:
+> 'pkg install wayland seatd && sysrc seatd_enable="YES" && service seatd start'
+
+HYPRLAND:
+> pkg install hyprland
+
+Sway:
+> 'pkg install sway' **Base sway, have a look at this for things like lock screens: https://docs.freebsd.org/en/books/handbook/wayland/#wayland-sway
+
+SwayFX:
+> 'pkg install swayfx'
+
+Hikari:
+> Coming soon!
 
 ===================================================
 
