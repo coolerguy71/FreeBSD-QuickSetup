@@ -1,10 +1,11 @@
 ===================================================
 
-Currently: V, 0.42
+Currently: V, 0.43
 Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
 
 Accidentally put sysrc sddm_enable="YES" in the GNOME part.
 **also very minor formatting changes
+add kitty terminal to install w/ hyprland
 
 > Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
 
@@ -156,7 +157,7 @@ pkg install wayland seatd && sysrc seatd_enable="YES" && sysrc dbus_enable="YES"
 # HYPRLAND:
 
 ```
-pkg install hyprland
+pkg install hyprland kitty
 ```
 
 # Sway:
