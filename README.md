@@ -1,31 +1,5 @@
 ===================================================
 
-> Currently: V, 0.45
-
-> Firstly, we need to give credit where credit is due. Thank you very much to https://github.com/grahamperrin for many contributions he made to documentation! This includes: Helping a ton with formatting, Adding a doc for older cards,anbed more! If he makes a contribution again, I'll add him as a contributor. I couldn't last time, because I didn't know how to manage pull requests.
-
-> 0.41 Accidentally put sysrc sddm_enable="YES" in the GNOME part.
-
-> 0.42 **also very minor formatting changes
-
-> 0.43 add kitty terminal to install w/ hyprland
-
-> 0.44 add wifimgr, it's useful
-
-> 0.45 Only the Virtualbox kernel module needs building, not the entire thing. Thanks Alexander88207. fixed "Ididium" typo, thanks Setesh.
-
-> 0.46 (minor update) Added entry for the user to be in the vboxusers group.
-
-> 0.47 More formatting fixes, thanks RandomGuy12.
-
-> 0.48 forgot to update iridium typo
-
-> 0.49 way too many inconsistencies, fixed nvidia quotes, and seperated a couple comments from commands.
-
-> 0.50 fixed vague comments
-
-> Give me a ping in the FreeBSD Discord server if you need help!: https://discord.gg/freebsd
-
 # Jump right into FreeBSD!
 
 
@@ -281,7 +255,7 @@ pkg install w3m
 ## VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling the Virtualbox kernel module. to get it working. It takes longer (only takes a couple minutes), but it still works!)
 
 ```
-cd /usr/ports/emulators/virtualbox-ose-kmod/ make install clean && pkg install virtualbox-ose && kldload vboxdrv
+cd /usr/ports/emulators/virtualbox-ose-kmod/ && make install clean && pkg install virtualbox-ose && kldload vboxdrv
 ```
 
 ```
