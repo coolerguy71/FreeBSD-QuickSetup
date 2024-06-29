@@ -31,6 +31,13 @@ pkg install drm-kmod && sysrc kld_list+=i915kms
 (AMD Radeon HD7000 and newer): pkg install drm-kmod && sysrc kld_list+=amdgpu
 ```
 
+> Newer cards need a newer DRM-kmod! 7xxx and newer:
+
+```
+cd /usr/ports/graphics/drm-61-kmod && make install clean && pkg install gpu-firmware-amd-kmod-dcn-3-1-4 gpu-firmware-amd-kmod-gc-11-0-1  gpu-firmware-amd-kmod-gc-11-0-4 gpu-firmware-amd-kmod-psp-13-0-4 gpu-firmware-amd-kmod-sdma-6-0-1 gpu-firmware-amd-kmod-vcn-4-0-2
+```
+> (a lot, but it is what is required at the moment.)
+
 > Older card? No problem!
 
 ```
@@ -42,7 +49,7 @@ pkg install drm-kmod && sysrc kld_list+=radeonkms
 > Newer cards, GTX 9XX and newer:
 
 ```
-'pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset
+pkg install nvidia-driver && sysrc kld_list+=nvidia-modeset
 ```
 
 > Older card? You can install older drivers!:
