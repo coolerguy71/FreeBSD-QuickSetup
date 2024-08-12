@@ -80,6 +80,8 @@ pw groupmod video -m username
 ```
 </details>
 
+</details>
+
 <summary>XORG Desktop Environments</summary>
 
 # If you're using an X-based DE, install XORG first!
