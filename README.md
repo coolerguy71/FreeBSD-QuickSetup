@@ -80,7 +80,7 @@ pw groupmod video -m username
 ```
 </details>
 
-# DESKTOP ENVIRONMENTS (XORG):
+<summary>XORG Desktop Environments</summary>
 
 # If you're using an X-based DE, install XORG first!
 
@@ -141,8 +141,11 @@ pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && s
 ```
 pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
+<details>
 
-# Compositors (Wayland)
+<details>
+
+<summary>Wayland Compositors</summary>
 
 ## 14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
 
@@ -178,6 +181,7 @@ pkg install swayfx foot
 ```
 Coming soon!
 ```
+<details>
 
 ## Login Managers:
 
@@ -192,8 +196,11 @@ pkg install sddm && sysrc sddm_enable="YES"
 ```
 pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
 ```
+<details>
 
-===================================================
+<details>
+
+<summary>Browsers</summary>
 
 # WEB BROWSERS: (Ranked heaviest to lightest btw!)
 
@@ -255,6 +262,7 @@ pkg install links
 ```
 pkg install w3m
 ```
+<details>
 
 ===================================================
 
