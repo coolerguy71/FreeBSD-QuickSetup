@@ -148,8 +148,6 @@ pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 
 <details>
 
-<details>
-
 <summary>Video Drivers</summary>
 
 ## 14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
