@@ -19,9 +19,7 @@
 
 <details>
 
-# <summary>Video Drivers</summary>
-
-# VIDEO DRIVERS:
+<summary>Video Drivers</summary>
 
 ## Intel:
 
@@ -80,8 +78,7 @@ pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset
 ```
 pw groupmod video -m username
 ```
-
-===================================================
+</details>
 
 # DESKTOP ENVIRONMENTS (XORG):
 
