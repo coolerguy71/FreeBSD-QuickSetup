@@ -145,6 +145,7 @@ pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && s
 ```
 pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
+
 <details>
 
 <details>
@@ -185,7 +186,6 @@ pkg install swayfx foot
 ```
 Coming soon!
 ```
-<details>
 
 ## Login Managers:
 
@@ -200,6 +200,7 @@ pkg install sddm && sysrc sddm_enable="YES"
 ```
 pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
 ```
+
 <details>
 
 <details>
