@@ -323,6 +323,7 @@ pkg install wifimgr
 > Source of information: https://docs.freebsd.org/en/books/handbook/
 
 ===================================================
+<details>
 
 > By: coolguy71 
 
