@@ -77,8 +77,6 @@ pkg install nvidia-driver-470 && sysrc kld_list+=nvidia-modeset
 ```
 pw groupmod video -m username
 ```
-</details>
-
 
 # 2. XORG Desktop Environments
 
