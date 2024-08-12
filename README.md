@@ -1,4 +1,4 @@
-Let's start setting up FreeBSD v
+Let's start setting up FreeBSD! v v v
 <details>
 
 <summary>Start</summary>
