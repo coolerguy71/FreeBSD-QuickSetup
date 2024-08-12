@@ -18,7 +18,7 @@
 
 <details>
 
-<summary>Video Drivers</summary>
+<summary>XORG Desktop Environments</summary>
 
 ## Intel:
 
