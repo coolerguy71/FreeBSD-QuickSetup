@@ -252,7 +252,7 @@ pkg install links
 pkg install w3m
 ```
 
-4, VIRTUALIZATION:
+# 4, VIRTUALIZATION:
 
 ## VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling the Virtualbox kernel module to get it working. It takes longer (only takes a couple minutes), but it still works!)
 
