@@ -1,4 +1,7 @@
-===================================================
+Let's start setting up FreeBSD v
+<details>
+
+<summary>Start</summary>
 
 # Jump right into FreeBSD!
 
