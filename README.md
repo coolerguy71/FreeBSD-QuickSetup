@@ -18,10 +18,7 @@ Let's start setting up FreeBSD! v v v
 ```
 (The root password you set)
 ```
-
-<details>
-
-<summary>Video Drivers</summary>
+# 1. Video Drivers
 
 ## Intel:
 
@@ -83,7 +80,7 @@ pw groupmod video -m username
 </details>
 
 
-<summary>XORG Desktop Environments</summary>
+# 2. XORG Desktop Environments
 
 # If you're using an X-based DE, install XORG first!
 
@@ -145,7 +142,7 @@ pkg install cinnamon lightdm lightdm-gtk-greeter && sysrc dbus_enable="YES" && s
 pkg install lxqt sddm && sysrc dbus_enable="YES" && sysrc sddm_enable="YES"
 ```
 
-<summary>Wayland Compositors</summary>
+# 2a. Wayland Compositors
 
 ## 14.1 fixed many issues with Wayland, so now this section of the guide is applicable!
 
@@ -196,13 +193,7 @@ pkg install sddm && sysrc sddm_enable="YES"
 pkg install gdm && sysrc gdm_enable="YES" **Not recommended because it will more than likely install extra GNOME utilities you don't need.
 ```
 
-<details>
-
-<details>
-
-<summary>Browsers</summary>
-
-# WEB BROWSERS: (Ranked heaviest to lightest btw!)
+# 3. WEB BROWSERS: (Ranked heaviest to lightest btw!)
 
 ## FIREFOX: 
 
@@ -262,13 +253,10 @@ pkg install links
 ```
 pkg install w3m
 ```
-<details>
 
-===================================================
+4, VIRTUALIZATION:
 
-# VIRTUALIZATION:
-
-## VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling the Virtualbox kernel module. to get it working. It takes longer (only takes a couple minutes), but it still works!)
+## VIRTUALBOX: (Note, currently, in 8 June 2024, FreeBSD 14.1 requires compiling the Virtualbox kernel module to get it working. It takes longer (only takes a couple minutes), but it still works!)
 
 ```
 cd /usr/ports/emulators/virtualbox-ose-kmod/ && make install clean && pkg install virtualbox-ose && kldload vboxdrv
@@ -287,7 +275,7 @@ sysrc vboxnet_enable="YES" && pw groupmod vboxusers -m username
 ```
 
 ```
-ee /etc/devfs.conf', add below!
+ee /etc/devfs.conf, add below!
 
 own     vboxnetctl root:vboxusers
 perm    vboxnetctl 0660
@@ -300,7 +288,7 @@ pw groupmod operator -m username
 ```
 
 ```
-ee /etc/devfs.rules' (doesn't exist yet, dont worry if it says it's new!) Add below:
+ee /etc/devfs.rules (doesn't exist yet, dont worry if it says it's new!) Add below:
 
 [system=10]
 add path 'usb/*' mode 0660 group operator
