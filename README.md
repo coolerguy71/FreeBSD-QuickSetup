@@ -17,6 +17,10 @@
 ```
 ===================================================
 
+<details>
+
+<summary># Video Drivers</summary>
+
 # VIDEO DRIVERS:
 
 ## Intel:
