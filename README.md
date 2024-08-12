@@ -15,7 +15,6 @@
 ```
 (The root password you set)
 ```
-===================================================
 
 <details>
 
@@ -80,10 +79,9 @@ pw groupmod video -m username
 ```
 </details>
 
+<details>
 
-</details>
-
-<summary>XORG Desktop Environments</summary>
+<summary>Video Drivers</summary>
 
 # If you're using an X-based DE, install XORG first!
 
