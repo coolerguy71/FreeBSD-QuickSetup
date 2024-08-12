@@ -18,7 +18,7 @@
 
 <details>
 
-<summary>XORG Desktop Environments</summary>
+<summary>Video Drivers</summary>
 
 ## Intel:
 
@@ -81,7 +81,7 @@ pw groupmod video -m username
 
 <details>
 
-<summary>Video Drivers</summary>
+<summary>XORG Desktop Environments</summary>
 
 # If you're using an X-based DE, install XORG first!
 
