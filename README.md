@@ -291,6 +291,25 @@ Coming soon!
 ```
 
 ===================================================
+# Extra Webcam Support
+```
+sysrc kld_list+=cuse4bsd
+sysrc webcamd_enable="YES"
+```
+Maybe you will need to attach your webcam/camera to webcamd, if so, do the following:
+```
+usbconfig | grep Camera
+usbconfig | grep Webcam
+```
+Then:
+```
+webcamd -d x.y
+```
+
+> Wherey x.y is the number that appers for your camera/webcam.  
+
+
+===================================================
 
 # Extra Wireless Options
 
